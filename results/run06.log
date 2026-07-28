@@ -1,0 +1,103 @@
+[06] model results/models/cnn_pinn_full/cnn_pinn.pt
+[06] trained with lambda_physics=0.1, 60 epochs
+
+--- TIC 393818343 -----------------------------------------------
+/Users/air/exoplanet-pinn/venv/lib/python3.11/site-packages/lightkurve/prf/__init__.py:7: UserWarning: Warning: the tpfmodel submodule is not available without oktopus installed, which requires a current version of autograd. See #1452 for details.
+  warnings.warn(
+  TIC 393818343: SPOC S55 120s  detrend 721->721 cadences
+    t0=2811.2226  depth=1.225%  duration(FWHM)=3.35h  SNR=18.2
+    S55 SPOC  depth=1.225%  FWHM=3.35h  SNR=18.2
+    BLS  0.5-27 d :    26.76 d  SDE=  0.7  
+    BLS  0.5-200 d:    26.79 d  SDE=  nan  
+    analytic      :     4.73 d
+    CNN-PINN      :     7.23 d  [4.0, 13.1]
+    TRUE          :    16.25 d   | BLS 65%  analytic 71%  PINN 55% (OUTSIDE 1sigma)
+
+--- TOI-1899 ----------------------------------------------------
+  TIC 172370679: SPOC S15 120s  detrend 721->771 cadences
+    t0=1711.9305  depth=3.610%  duration(FWHM)=3.99h  SNR=5.7
+    S15 SPOC  depth=3.610%  FWHM=3.99h  SNR=5.7
+    BLS  0.5-27 d :    11.25 d  SDE=  2.0  
+    BLS  0.5-200 d:    11.31 d  SDE=  nan  
+    analytic      :    27.07 d
+    CNN-PINN      :   128.62 d  [68.1, 242.9]
+    TRUE          :    29.09 d   | BLS 61%  analytic 7%  PINN 342% (OUTSIDE 1sigma)
+
+--- NGTS-38 b ---------------------------------------------------
+  TIC 65910228: TESS-SPOC S33 600s  detrend 145->405 cadences
+    t0=2209.1737  depth=0.347%  duration(FWHM)=11.52h  SNR=8.1
+    S33 TESS-SPOC  depth=0.347%  FWHM=11.52h  SNR=8.1
+    BLS  0.5-27 d :    18.49 d  SDE=  1.2  
+    BLS  0.5-200 d:    18.49 d  SDE=  nan  
+    analytic      :    56.18 d
+    CNN-PINN      :   237.14 d  [113.4, 496.0]
+    TRUE          :   180.53 d   | BLS 90%  analytic 69%  PINN 31% (inside 1sigma)
+
+--- TIC 233577004 -----------------------------------------------
+  TIC 233577004: TESS-SPOC S14 1800s  detrend 49->105 cadences
+    t0=1704.2613  depth=0.547%  duration(FWHM)=8.70h  SNR=8.9
+    S14 TESS-SPOC  depth=0.547%  FWHM=8.70h  SNR=8.9
+    BLS  0.5-27 d :    21.05 d  SDE=  1.8  
+    BLS  0.5-200 d:    21.05 d  SDE=  nan  
+    analytic      :    35.84 d
+    CNN-PINN      :   130.25 d  [59.0, 287.5]
+
+--- TIC 341687821 -----------------------------------------------
+  TIC 341687821: TESS-SPOC S21 1800s  detrend 49->69 cadences
+    t0=1889.7635  depth=0.154%  duration(FWHM)=9.32h  SNR=5.1
+    S21 TESS-SPOC  depth=0.154%  FWHM=9.32h  SNR=5.1
+    BLS  0.5-27 d :    19.32 d  SDE=  1.2  
+    BLS  0.5-200 d:    19.32 d  SDE=  nan  
+    analytic      :    65.66 d
+    CNN-PINN      :   112.04 d  [49.5, 253.8]
+
+--- TIC 122522333 -----------------------------------------------
+Warning: 32% (408/1288) of the cadences will be ignored due to the quality mask (quality_bitmask=17087).
+  TIC 122522333: TESS-SPOC S3 1800s  detrend 49->89 cadences
+    t0=1389.4941  depth=0.202%  duration(FWHM)=7.52h  SNR=5.1
+    S3 TESS-SPOC  depth=0.202%  FWHM=7.52h  SNR=5.1
+    BLS  0.5-27 d :    16.75 d  SDE=  0.8  
+    BLS  0.5-200 d:    16.76 d  SDE=  nan  
+    analytic      :    15.57 d
+    CNN-PINN      :    30.62 d  [13.5, 69.2]
+
+--- TIC 438122862 -----------------------------------------------
+  TIC 438122862: TESS-SPOC S6 1800s  detrend 49->49 cadences
+    t0=1475.8915  depth=0.084%  duration(FWHM)=6.66h  SNR=2.4
+    S6 TESS-SPOC  depth=0.084%  FWHM=6.66h  SNR=2.4
+    BLS  0.5-27 d :    14.31 d  SDE=  0.7  
+    BLS  0.5-200 d:    14.32 d  SDE=  nan  
+    analytic      :     9.68 d
+    CNN-PINN      :    37.57 d  [11.7, 121.0]
+
+--- TIC 232616346 -----------------------------------------------
+  TIC 232616346: TESS-SPOC S20 1800s  detrend 49->75 cadences
+    t0=1854.0523  depth=0.242%  duration(FWHM)=10.34h  SNR=4.1
+    S20 TESS-SPOC  depth=0.242%  FWHM=10.34h  SNR=4.1
+    BLS  0.5-27 d :    14.82 d  SDE=  0.7  
+    BLS  0.5-200 d:    14.83 d  SDE=  nan  
+    analytic      :    25.65 d
+    CNN-PINN      :    60.11 d  [25.9, 139.7]
+
+====================================================================================================
+HEAD TO HEAD - BLS given only what it could know in practice (0.5-27 d)
+====================================================================================================
+target         true P   BLS    err  analytic  err  CNN-PINN  err   PINN 1sigma
+-------------  -------  -----  ---  --------  ---  --------  ----  -----------
+TIC 393818343  16.25    26.76  65%  4.7       71%  7.2       55%   [4,13]     
+TOI-1899       29.09    11.25  61%  27.1      7%   128.6     342%  [68,243]   
+NGTS-38 b      180.53   18.49  90%  56.2      69%  237.1     31%   [113,496]  
+TIC 233577004  unknown  21.05       35.8           130.3           [59,287]   
+TIC 341687821  unknown  19.32       65.7           112.0           [49,254]   
+TIC 122522333  unknown  16.75       15.6           30.6            [14,69]    
+TIC 438122862  unknown  14.31       9.7            37.6            [12,121]   
+TIC 232616346  unknown  14.82       25.7           60.1            [26,140]   
+
+On the confirmed planets:
+  BLS (0.5-27 d)   median |error| =    64.7%   worst =    89.8%
+  analytic         median |error| =    68.9%   worst =    70.9%
+  CNN-PINN         median |error| =    55.5%   worst =   342.1%
+  CNN-PINN 1-sigma interval contained the truth for 1/3 confirmed planets
+
+[06] wrote /Users/air/exoplanet-pinn/results/data/head_to_head.json
+[06] figure -> /Users/air/exoplanet-pinn/results/figures/head_to_head.png

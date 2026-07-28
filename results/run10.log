@@ -1,0 +1,48 @@
+[10] noise pool: 80 light curves, 2031 days of real photometry
+  [inject] 2,000/25,000 (22% of attempts kept)
+  [inject] 4,000/25,000 (21% of attempts kept)
+  [inject] 6,000/25,000 (21% of attempts kept)
+  [inject] 8,000/25,000 (21% of attempts kept)
+  [inject] 10,000/25,000 (21% of attempts kept)
+  [inject] 12,000/25,000 (21% of attempts kept)
+  [inject] 14,000/25,000 (21% of attempts kept)
+  [inject] 16,000/25,000 (21% of attempts kept)
+  [inject] 18,000/25,000 (21% of attempts kept)
+  [inject] 20,000/25,000 (21% of attempts kept)
+  [inject] 22,000/25,000 (21% of attempts kept)
+  [inject] 24,000/25,000 (21% of attempts kept)
+[inject] kept 25,000 of 118,010 attempts (21.2%)
+[inject] period      3.00 -   999.79 d
+[inject] duration    1.91 -    27.18 h
+[inject] depth      0.039 -   15.007 %
+[10] wrote /Users/air/exoplanet-pinn/results/data/injected.npz
+
+=== training inj_full (use_lightcurve=True) ===
+  epoch    0  total   0.1880  data   0.1880  phys   0.0000  val_nll   0.0039  val_med_err   67.7%
+  epoch    5  total  -0.1940  data  -0.2085  phys   0.1448  val_nll  -0.1654  val_med_err   49.6%
+  epoch   10  total  -0.2468  data  -0.2622  phys   0.1536  val_nll  -0.2138  val_med_err   49.1%
+  epoch   15  total  -0.3156  data  -0.3315  phys   0.1599  val_nll  -0.2224  val_med_err   44.1%
+  epoch   20  total  -0.3416  data  -0.3578  phys   0.1620  val_nll  -0.2128  val_med_err   43.9%
+  epoch   25  total  -0.3912  data  -0.4078  phys   0.1655  val_nll  -0.1542  val_med_err   44.6%
+  early stop at epoch 30: no val improvement for 12 epochs (best was epoch 18)
+[train] done in 164.5s  best val NLL -0.2440 at epoch 18
+[train] saved /Users/air/exoplanet-pinn/results/models/cnn_pinn_inj_full/cnn_pinn.pt
+
+=== training inj_scalars (use_lightcurve=False) ===
+  epoch    0  total   0.2841  data   0.2841  phys   0.0000  val_nll   0.1383  val_med_err   69.1%
+  epoch    5  total   0.0751  data   0.0651  phys   0.1005  val_nll   0.0877  val_med_err   63.7%
+  epoch   10  total   0.0523  data   0.0424  phys   0.0990  val_nll   0.0436  val_med_err   69.5%
+  epoch   15  total   0.0456  data   0.0355  phys   0.1011  val_nll   0.0455  val_med_err   67.9%
+  epoch   20  total   0.0314  data   0.0211  phys   0.1026  val_nll   0.0329  val_med_err   65.5%
+  epoch   25  total   0.0269  data   0.0166  phys   0.1033  val_nll   0.0305  val_med_err   66.0%
+  epoch   30  total   0.0220  data   0.0117  phys   0.1030  val_nll   0.0282  val_med_err   66.8%
+  epoch   35  total   0.0168  data   0.0065  phys   0.1027  val_nll   0.0308  val_med_err   68.0%
+  epoch   40  total   0.0107  data   0.0003  phys   0.1039  val_nll   0.0245  val_med_err   66.7%
+  epoch   45  total   0.0105  data   0.0002  phys   0.1028  val_nll   0.0245  val_med_err   66.2%
+  epoch   50  total   0.0085  data  -0.0020  phys   0.1043  val_nll   0.0250  val_med_err   66.8%
+  epoch   55  total   0.0042  data  -0.0062  phys   0.1041  val_nll   0.0263  val_med_err   66.6%
+  epoch   59  total   0.0030  data  -0.0075  phys   0.1043  val_nll   0.0260  val_med_err   66.2%
+[train] done in 7.4s  best val NLL 0.0237 at epoch 51
+[train] saved /Users/air/exoplanet-pinn/results/models/cnn_pinn_inj_scalars/cnn_pinn.pt
+
+[10] done. Evaluate on real targets with scripts/11_final_comparison.py

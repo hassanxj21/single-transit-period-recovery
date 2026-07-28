@@ -1,0 +1,18 @@
+{
+  "analytic": {
+    "median_pct": 61.59550716578646,
+    "scatter_dex": 0.6131480638439742
+  },
+  "knn_bayes": {
+    "median_pct": 56.049338531785125,
+    "scatter_dex": 0.38207620524297287
+  },
+  "pinn_scalars_only": {
+    "median_pct": 57.274277490023245,
+    "scatter_dex": 0.3852610786996864
+  },
+  "pinn_full": {
+    "median_pct": 38.21413632370942,
+    "scatter_dex": 0.2782364591311539
+  }
+}

@@ -1,0 +1,110 @@
+[09] TIC query 1/6: 90.0 -66.0 Tmag 8.0-10.0 (~40 s)...
+       29 rows -> kept 14
+[09] TIC query 2/6: 90.0 -66.0 Tmag 10.0-12.5 (~40 s)...
+       216 rows -> kept 14
+[09] TIC query 3/6: 270.0 66.0 Tmag 8.0-10.0 (~40 s)...
+       25 rows -> kept 14
+[09] TIC query 4/6: 270.0 66.0 Tmag 10.0-12.5 (~40 s)...
+       221 rows -> kept 14
+[09] TIC query 5/6: 180.0 -45.0 Tmag 8.0-10.0 (~40 s)...
+       37 rows -> kept 14
+[09] TIC query 6/6: 180.0 -45.0 Tmag 10.0-12.5 (~40 s)...
+       400 rows -> kept 14
+[09] cached 84 stars -> /Users/air/exoplanet-pinn/results/data/pool_tic_list.json
+[09] 84 candidate field stars (evaluation targets excluded)
+
+  [  1/80] TIC 31409361 S  2 QLP           1800s Tmag= 8.03 n=  1228  [dip masked]
+Warning: 38% (490/1288) of the cadences will be ignored due to the quality mask (quality_bitmask=17087).
+  [  2/80] TIC 31409361 S  3 GSFC-ELEANOR-LITE  1800s Tmag= 8.03 n=   798  [dip masked]
+  [  3/80] TIC 31408736 S  5 QLP           1800s Tmag= 8.09 n=  1188  [dip masked]
+  [  4/80] TIC 31408736 S  8 QLP           1800s Tmag= 8.09 n=   963  [dip masked]
+  [  5/80] TIC 150067238 S  2 QLP           1800s Tmag= 8.36 n=  1228
+Warning: 38% (490/1288) of the cadences will be ignored due to the quality mask (quality_bitmask=17087).
+  [  6/80] TIC 150067238 S  3 GSFC-ELEANOR-LITE  1800s Tmag= 8.36 n=   798  [dip masked]
+  [  7/80] TIC 150032882 S  1 SPOC           120s Tmag= 8.70 n= 18278  [dip masked]
+  [  8/80] TIC 150032882 S  2 QLP           1800s Tmag= 8.70 n=  1228  [dip masked]
+  [  9/80] TIC 149991210 S  1 TESS-SPOC     1800s Tmag= 8.83 n=  1184
+  [ 10/80] TIC 149991210 S  2 TESS-SPOC     1800s Tmag= 8.83 n=  1196
+  [ 11/80] TIC 149933273 S  1 TESS-SPOC     1800s Tmag= 8.85 n=  1182
+  [ 12/80] TIC 149933273 S  4 TESS-SPOC     1800s Tmag= 8.85 n=   901  [dip masked]
+  [ 13/80] TIC 374942490 S  1 SPOC           120s Tmag= 8.86 n= 18276  [dip masked]
+Warning: 30% (5872/19412) of the cadences will be ignored due to the quality mask (quality_bitmask=17087).
+  [ 14/80] TIC 374942490 S  3 SPOC           120s Tmag= 8.86 n= 12947  [dip masked]
+  [ 15/80] TIC 41115548 S 61 SPOC           120s Tmag= 8.94 n= 15554  [dip masked]
+  [ 16/80] TIC 41115548 S 62 SPOC           120s Tmag= 8.94 n= 16045  [dip masked]
+  [ 17/80] TIC 40975842 S 61 SPOC           120s Tmag= 9.04 n= 15554  [dip masked]
+  [ 18/80] TIC 40975842 S 62 SPOC           120s Tmag= 9.04 n= 16046  [dip masked]
+  [ 19/80] TIC 31512865 S 61 TESS-SPOC      200s Tmag= 9.05 n=  9136  [dip masked]
+  [ 20/80] TIC 31512865 S 62 TESS-SPOC      200s Tmag= 9.05 n=  9430  [dip masked]
+  [ 21/80] TIC 149933253 S  1 SPOC           120s Tmag= 9.05 n= 18275  [dip masked]
+  [ 22/80] TIC 149933253 S  4 SPOC           120s Tmag= 9.05 n= 14692  [dip masked]
+  [ 23/80] TIC 150033237 S  2 TESS-SPOC     1800s Tmag= 9.13 n=  1196  [dip masked]
+Warning: 38% (490/1288) of the cadences will be ignored due to the quality mask (quality_bitmask=17087).
+  [ 24/80] TIC 150033237 S  3 GSFC-ELEANOR-LITE  1800s Tmag= 9.13 n=   798  [dip masked]
+  [ 25/80] TIC 149933391 S  1 QLP           1800s Tmag= 9.14 n=  1266  [dip masked]
+Warning: 38% (490/1288) of the cadences will be ignored due to the quality mask (quality_bitmask=17087).
+  [ 26/80] TIC 149933391 S  3 GSFC-ELEANOR-LITE  1800s Tmag= 9.14 n=   798  [dip masked]
+  [ 27/80] TIC 150033338 S  2 QLP           1800s Tmag= 9.38 n=  1228  [dip masked]
+  [ 28/80] TIC 150033338 S  3 QLP           1800s Tmag= 9.38 n=  1291  [dip masked]
+  [ 29/80] TIC 374907967 S  2 QLP           1800s Tmag=10.01 n=  1228  [dip masked]
+Warning: 38% (490/1288) of the cadences will be ignored due to the quality mask (quality_bitmask=17087).
+  [ 30/80] TIC 374907967 S  3 GSFC-ELEANOR-LITE  1800s Tmag=10.01 n=   798  [dip masked]
+Warning: 38% (490/1288) of the cadences will be ignored due to the quality mask (quality_bitmask=17087).
+  [ 31/80] TIC 31513956 S  3 GSFC-ELEANOR-LITE  1800s Tmag=10.03 n=   798  [dip masked]
+  [ 32/80] TIC 31513956 S 61 TESS-SPOC      200s Tmag=10.03 n=  9136  [dip masked]
+  [ 33/80] TIC 31513988 S 61 SPOC           120s Tmag=10.06 n= 15490  [dip masked]
+  [ 34/80] TIC 31513988 S 62 SPOC           120s Tmag=10.06 n= 15909  [dip masked]
+  [ 35/80] TIC 41084026 S  2 TESS-SPOC     1800s Tmag=10.08 n=  1196  [dip masked]
+  [ 36/80] TIC 41084026 S  5 TESS-SPOC     1800s Tmag=10.08 n=  1134
+  [ 37/80] TIC 150032983 S  2 SPOC           120s Tmag=10.15 n= 18299  [dip masked]
+  [ 38/80] TIC 150032983 S  5 SPOC           120s Tmag=10.15 n= 17090  [dip masked]
+  [ 39/80] TIC 31410112 S 61 TESS-SPOC      200s Tmag=10.23 n=  9136  [dip masked]
+  [ 40/80] TIC 31410112 S 62 TESS-SPOC      200s Tmag=10.23 n=  9430  [dip masked]
+  [ 41/80] TIC 150033558 S  1 TESS-SPOC     1800s Tmag=10.23 n=  1184  [dip masked]
+  [ 42/80] TIC 150033558 S  2 TESS-SPOC     1800s Tmag=10.23 n=  1196  [dip masked]
+  [ 43/80] TIC 31409387 S  2 QLP           1800s Tmag=10.28 n=  1228  [dip masked]
+Warning: 38% (490/1288) of the cadences will be ignored due to the quality mask (quality_bitmask=17087).
+  [ 44/80] TIC 31409387 S  3 GSFC-ELEANOR-LITE  1800s Tmag=10.28 n=   798  [dip masked]
+  [ 45/80] TIC 149932948 S  1 QLP           1800s Tmag=10.28 n=  1266  [dip masked]
+  [ 46/80] TIC 149932948 S  4 QLP           1800s Tmag=10.28 n=  1046  [dip masked]
+  [ 47/80] TIC 150067087 S  2 SPOC           120s Tmag=10.28 n= 18299  [dip masked]
+Warning: 30% (5872/19412) of the cadences will be ignored due to the quality mask (quality_bitmask=17087).
+  [ 48/80] TIC 150067087 S  3 SPOC           120s Tmag=10.28 n= 12446  [dip masked]
+  [ 49/80] TIC 41084585 S 61 TESS-SPOC      200s Tmag=10.31 n=  9136  [dip masked]
+  [ 50/80] TIC 41084585 S 62 TESS-SPOC      200s Tmag=10.31 n=  9430  [dip masked]
+  [ 51/80] TIC 374942153 S  1 SPOC           120s Tmag=10.31 n= 18276  [dip masked]
+Warning: 30% (5873/19412) of the cadences will be ignored due to the quality mask (quality_bitmask=17087).
+  [ 52/80] TIC 374942153 S  3 SPOC           120s Tmag=10.31 n= 12525  [dip masked]
+  [ 53/80] TIC 149973879 S  1 SPOC           120s Tmag=10.31 n= 18278  [dip masked]
+  [ 54/80] TIC 149973879 S  2 SPOC           120s Tmag=10.31 n= 18298  [dip masked]
+  [ 55/80] TIC 31604303 S 61 SPOC           120s Tmag=10.36 n= 15372  [dip masked]
+  [ 56/80] TIC 31604303 S 62 SPOC           120s Tmag=10.36 n= 15596  [dip masked]
+  [ 57/80] TIC 233080272 S 16 SPOC           120s Tmag= 8.00 n= 15139  [dip masked]
+  [ 58/80] TIC 233080272 S 17 SPOC           120s Tmag= 8.00 n= 14180  [dip masked]
+  [ 59/80] TIC 233054038 S 14 QLP           1800s Tmag= 8.13 n=  1237  [dip masked]
+  [ 60/80] TIC 233054038 S 15 QLP           1800s Tmag= 8.13 n=  1190  [dip masked]
+  [ 61/80] TIC 219093896 S 56 TESS-SPOC      200s Tmag= 8.17 n= 11763  [dip masked]
+  [ 62/80] TIC 219093896 S 57 TESS-SPOC      200s Tmag= 8.17 n= 10788  [dip masked]
+  [ 63/80] TIC 233074812 S 15 QLP           1800s Tmag= 8.31 n=  1190  [dip masked]
+  [ 64/80] TIC 233074812 S 16 QLP           1800s Tmag= 8.31 n=  1118  [dip masked]
+  [ 65/80] TIC 233049320 S 14 QLP           1800s Tmag= 8.62 n=  1237  [dip masked]
+  [ 66/80] TIC 233049320 S 15 QLP           1800s Tmag= 8.62 n=  1190  [dip masked]
+  [ 67/80] TIC 233080216 S 15 SPOC           120s Tmag= 8.95 n= 16338  [dip masked]
+  [ 68/80] TIC 233080216 S 16 SPOC           120s Tmag= 8.95 n= 15144  [dip masked]
+  [ 69/80] TIC 219111368 S 16 QLP           1800s Tmag= 8.96 n=  1118
+  [ 70/80] TIC 219111368 S 19 QLP           1800s Tmag= 8.96 n=  1150  [dip masked]
+  [ 71/80] TIC 362103349 S 14 SPOC           120s Tmag= 8.96 n= 18421  [dip masked]
+  [ 72/80] TIC 362103349 S 15 SPOC           120s Tmag= 8.96 n= 16336  [dip masked]
+  [ 73/80] TIC 233080190 S 15 SPOC           120s Tmag= 9.01 n= 16341  [dip masked]
+  [ 74/80] TIC 233080190 S 16 SPOC           120s Tmag= 9.01 n= 15145  [dip masked]
+  [ 75/80] TIC 219093943 S 56 SPOC           120s Tmag= 9.03 n= 19612  [dip masked]
+  [ 76/80] TIC 219093943 S 57 SPOC           120s Tmag= 9.03 n= 17988  [dip masked]
+  [ 77/80] TIC 219106792 S 56 TESS-SPOC      200s Tmag= 9.09 n= 11763  [dip masked]
+  [ 78/80] TIC 219106792 S 57 TESS-SPOC      200s Tmag= 9.09 n= 10787  [dip masked]
+  [ 79/80] TIC 219106714 S 14 TESS-SPOC     1800s Tmag= 9.21 n=  1220  [dip masked]
+  [ 80/80] TIC 219106714 S 26 TESS-SPOC     1800s Tmag= 9.21 n=  1136  [dip masked]
+
+[09] 80 light curves from 40 distinct stars
+[09] 2031 days total, Tmag 8.0-10.4, 16 sectors, cadences [120.0, 200.0, 1800.0]
+[09] evaluation-target overlap: []
+[09] wrote /Users/air/exoplanet-pinn/results/data/noise_pool.npz

@@ -1,0 +1,39 @@
+{
+  "config": {
+    "epochs": 300,
+    "batch_size": 512,
+    "lr": 0.0015,
+    "weight_decay": 1e-05,
+    "lambda_physics": 0.1,
+    "val_fraction": 0.15,
+    "seed": 0,
+    "device": "cpu",
+    "physics_warmup": 20
+  },
+  "analytic": {
+    "n": 9000,
+    "n_failed": 0,
+    "median_pct": 60.66078660014308,
+    "mean_pct": 94.51335921834311,
+    "median_dex": 0.36546541401412386,
+    "frac_within_10pct": 0.044222222222222225,
+    "frac_within_25pct": 0.1438888888888889,
+    "frac_within_factor_2": 0.42333333333333334,
+    "median_bias_ratio": 0.4848036876580205
+  },
+  "cnn_pinn": {
+    "n": 9000,
+    "n_failed": 0,
+    "median_pct": 43.03935670922073,
+    "mean_pct": 84.87911721227788,
+    "median_dex": 0.19442942456243245,
+    "frac_within_10pct": 0.12366666666666666,
+    "frac_within_25pct": 0.3042222222222222,
+    "frac_within_factor_2": 0.6777777777777778,
+    "median_bias_ratio": 1.0587810972375833
+  },
+  "coverage": {
+    "coverage": 0.7267777777777777,
+    "median_width_dex": 0.6337220063307456
+  }
+}

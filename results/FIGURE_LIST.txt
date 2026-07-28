@@ -1,0 +1,6 @@
+fig01_predicted_vs_true.png
+fig02_median_error.png
+fig04_gain_vs_b.png
+fig03_by_eccentricity.png
+fig04b_binned_b_reference.png
+fig05_intervals.png

@@ -1,0 +1,308 @@
+============================================================================================================
+EXOPLANET SINGLE-TRANSIT PERIOD RECOVERY - RESULTS DUMP
+============================================================================================================
+
+============================================================================================================
+0. SAMPLE ARITHMETIC - what the headline n actually is
+============================================================================================================
+  N  selected confirmed single-transit targets      30
+     of which failed to process                     3
+     processed successfully                         27
+  M  excluded, transit SNR < 8                            10
+  K  excluded, true period outside training prior   1
+     (3 - 1000 d)
+  n  HEADLINE SET                                   16
+
+  One-sentence form for the paper:
+    "Of 30 confirmed single-transit planets selected, 3 failed to process,
+     10 were excluded because the transit was not detected above SNR 8,
+     and 1 because the true period lies outside the model's training
+     prior, leaving n = 16."
+
+  M - EXCLUDED ON SNR (< 8):
+target      true P  SNR  depth%  FWHM meas  T14 pub
+----------  ------  ---  ------  ---------  -------
+TOI-1227 b  27.4    2.2  1.626   1.65       4.83   
+TOI-712 d   84.8    2.3  0.071   0.86       5.70   
+TOI-4562 b  225.1   2.9  0.945   3.01       4.32   
+TOI-1752 c  32.7    3.2  0.560   1.98       3.59   
+HD 56414 b  29.0    4.2  0.079   4.83       7.58   
+HD 28109 d  84.3    5.0  0.074   4.11       10.32  
+TOI-707 b   52.8    5.1  0.214   2.01       6.21   
+TOI-2295 b  30.0    5.9  0.147   3.29       3.01   
+HD 22946 d  47.4    6.7  0.047   5.36       6.48   
+TOI-4633 c  271.9   7.3  0.077   8.96       11.45  
+  These are genuine non-detections in a single sector, not pipeline failures:
+  a duration cannot be measured from a transit that is not detected.
+
+  K - EXCLUDED AS PRIOR-LIMITED (supplementary table):
+  Prior saturation measured rather than asserted - each row shows what the
+  model returned, the prior edge it saturated against, and the truth.
+target     true P  prior edge  analytic  scalars  synth full  inj full  inj scalars  SNR 
+---------  ------  ----------  --------  -------  ----------  --------  -----------  ----
+TOI-201 c  2890.0  1000        135.3     250.8    363.8       379.7     254.5        21.3
+
+Methods: bls27, bls200, analytic, scalars, synth full, inj full, inj scalars
+
+TIC 393818343 is EXCLUDED from all numbers below: at P = 16.25 d against a
+25.4 d usable sector baseline it completes ~1.6 orbits per sector and is not
+a single-transit target. It is reported separately as physics validation.
+
+============================================================================================================
+1. PER-TARGET RESULTS
+============================================================================================================
+target      true P  e     b     depth%  FWHM   SNR    bls27       bls200      analytic    scalars       synth full    inj full      inj scalars 
+----------  ------  ----  ----  ------  -----  -----  ----------  ----------  ----------  ------------  ------------  ------------  ------------
+TOI-2147 b  26.2    0.29  0.33  0.585   4.54   13.1   25.2 (4%)   25.2 (4%)   5.7 (78%)   22.7 (13%)    10.9 (58%)    15.7 (40%)    23.0 (12%)  
+TOI-1899    29.1    -     -     3.608   3.99   34.5   11.3 (61%)  11.3 (61%)  27.1 (7%)   75.9 (161%)   129.4 (345%)  255.7 (779%)  72.4 (149%) 
+TOI-5110 b  30.2    0.74  0.43  0.273   4.43   7.8    17.0 (44%)  17.0 (44%)  1.6 (95%)   14.5 (52%)    9.1 (70%)     9.8 (67%)     15.1 (50%)  
+TOI-3457 b  32.6    0.59  0.29  0.542   4.24   9.2    16.7 (49%)  16.8 (49%)  4.1 (87%)   17.1 (48%)    10.7 (67%)    9.2 (72%)     18.1 (45%)  
+TOI-6478 b  34.0    -     0.19  4.146   2.55   12.2   15.2 (55%)  15.2 (55%)  49.9 (47%)  76.7 (126%)   111.7 (229%)  69.9 (106%)   72.6 (113%) 
+TOI-1751 b  37.5    0.33  0.39  0.094   4.83   7.8    15.7 (58%)  15.7 (58%)  7.8 (79%)   34.6 (8%)     21.4 (43%)    17.8 (53%)    43.3 (15%)  
+TOI-4127 b  56.4    0.75  0.15  1.008   2.87   15.8   21.2 (62%)  21.2 (62%)  2.2 (96%)   11.5 (80%)    12.0 (79%)    11.9 (79%)    9.8 (83%)   
+TOI-4600 b  82.7    0.25  0.39  1.052   5.91   12.4   17.6 (79%)  17.6 (79%)  58.0 (30%)  157.5 (90%)   229.1 (177%)  122.6 (48%)   146.0 (77%) 
+TOI-813 b   83.9    0.00  0.30  0.158   11.61  10.5   16.5 (80%)  16.5 (80%)  47.3 (44%)  142.2 (69%)   110.2 (31%)   51.2 (39%)    116.6 (39%) 
+TOI-904 c   84.0    -     0.37  0.328   3.45   9.7    13.2 (84%)  9.4 (89%)   26.2 (69%)  91.7 (9%)     30.2 (64%)    46.0 (45%)    78.1 (7%)   
+TOI-2134 c  95.5    0.67  0.46  1.008   4.27   182.0  12.1 (87%)  12.1 (87%)  27.1 (72%)  98.0 (3%)     59.2 (38%)    41.8 (56%)    101.4 (6%)  
+NGTS-30 b   98.3    0.29  0.78  1.182   3.97   18.7   15.0 (85%)  15.0 (85%)  13.0 (87%)  51.1 (48%)    51.8 (47%)    25.6 (74%)    57.0 (42%)  
+TOI-4507 b  104.6   0.09  0.12  0.465   8.25   24.2   11.8 (89%)  11.8 (89%)  92.6 (11%)  208.9 (100%)  143.3 (37%)   134.5 (29%)   212.6 (103%)
+TOI-199 b   104.9   0.09  0.45  1.172   5.12   38.3   20.6 (80%)  20.6 (80%)  38.0 (64%)  120.4 (15%)   101.2 (3%)    43.8 (58%)    114.7 (9%)  
+NGTS-38 b   180.5   0.31  0.85  0.347   11.47  42.6   18.5 (90%)  18.5 (90%)  55.5 (69%)  150.8 (16%)   228.6 (27%)   206.4 (14%)   128.0 (29%) 
+TOI-791 c   232.0   0.03  0.67  0.705   10.24  18.9   8.9 (96%)   17.8 (92%)  71.8 (69%)  173.5 (25%)   139.0 (40%)   148.0 (36%)   159.9 (31%) 
+
+============================================================================================================
+2. SUMMARY - all confirmed single-transit targets
+============================================================================================================
+method       n   median err  mean err  worst  median dex  within 2x  1sig coverage
+-----------  --  ----------  --------  -----  ----------  ---------  -------------
+bls27        16  79.5%       69.0%     96%    0.689       100%       -            
+bls200       16  79.5%       69.0%     92%    0.689       100%       -            
+analytic     16  69.2%       62.7%     96%    0.511       100%       -            
+scalars      16  47.8%       53.9%     161%   0.254       88%        14/16 (88%)  
+synth full   16  52.8%       84.7%     345%   0.329       81%        8/16 (50%)   
+inj full     16  54.4%       99.7%     779%   0.319       88%        8/16 (50%)   
+inj scalars  16  40.5%       50.7%     149%   0.199       81%        14/16 (88%)  
+
+============================================================================================================
+3. IMPACT PARAMETER  ** PRIMARY RESULT ** - continuous, unbinned
+============================================================================================================
+Reported as a rank correlation rather than binned means: with n of this size,
+four bins give 4-5 targets each and the result becomes a comparison of noisy
+means plus bin edges that have to be defended. The Spearman coefficient uses
+every target and makes no arbitrary choices. Binned table follows for reference.
+
+  Quantity: gain = (analytic |error| - model |error|) in percentage points,
+  against published impact parameter b. The analytic estimator must assume
+  b = 0, so if a model reads b from transit shape, gain should RISE with b
+  (positive rho). If the model only reproduces the analytic answer plus a
+  prior, gain should be uncorrelated with b (rho ~ 0).
+
+model        n   median gain  Spearman rho  p-value  verdict               
+-----------  --  -----------  ------------  -------  ----------------------
+scalars      15  +42.9 pp     +0.493        0.062    not significant       
+synth full   15  +20.2 pp     +0.743        0.002    supports shape-reading
+inj full     15  +15.7 pp     +0.404        0.136    not significant       
+inj scalars  15  +42.9 pp     +0.400        0.140    not significant       
+
+  Per-target values (b, gain in pp) for the scatter in fig04:
+target      b      analytic err  scalars err  gain pp
+----------  -----  ------------  -----------  -------
+TOI-4507 b  0.120  11%           100%         -88    
+TOI-4127 b  0.150  96%           80%          +17    
+TOI-6478 b  0.186  47%           126%         -79    
+TOI-3457 b  0.291  87%           48%          +40    
+TOI-813 b   0.300  44%           69%          -26    
+TOI-2147 b  0.330  78%           13%          +65    
+TOI-904 c   0.373  69%           9%           +60    
+TOI-1751 b  0.390  79%           8%           +72    
+TOI-4600 b  0.390  30%           90%          -61    
+TOI-5110 b  0.430  95%           52%          +43    
+TOI-199 b   0.450  64%           15%          +49    
+TOI-2134 c  0.464  72%           3%           +69    
+TOI-791 c   0.671  69%           25%          +44    
+NGTS-30 b   0.777  87%           48%          +39    
+NGTS-38 b   0.854  69%           16%          +53    
+
+------------------------------------------------------------------------------------------------------------
+3a. BINNED BY IMPACT PARAMETER (reference only - see rank correlation above)
+------------------------------------------------------------------------------------------------------------
+This is the rung of the argument that is otherwise unproven: what does the
+network add over the analytic inversion? The analytic estimator must assume
+b = 0, so its error should grow with true b. If a model reads b from transit
+shape, its error should grow more slowly. If it does not, the model is only
+reproducing the analytic answer plus a prior.
+
+BY IMPACT PARAMETER - median |error| %
+impact parameter  n  analytic  scalars  synth full  inj full  inj scalars
+----------------  -  --------  -------  ----------  --------  -----------
+b < 0.3           4  67        90       73          75        93         
+0.3-0.5           8  70        14       51          50        14         
+0.5-0.7           1  -         -        -           -         -          
+b >= 0.7          2  78        32       37          44        36         
+
+  analytic-minus-model error by b bin (positive = model beats analytic):
+b bin     n  analytic  scalars gain  synth full gain  inj full gain  inj scalars gain
+--------  -  --------  ------------  ---------------  -------------  ----------------
+b < 0.3   4  67%       -23 pp        -6 pp            -8 pp          -26 pp          
+0.3-0.5   8  70%       +56 pp        +20 pp           +20 pp         +56 pp          
+b >= 0.7  2  78%       +46 pp        +41 pp           +34 pp         +42 pp          
+
+============================================================================================================
+3b. BREAKDOWN BY ECCENTRICITY
+============================================================================================================
+The synthetic analysis found the CNN advantage decaying to zero as e rises,
+because the CNN reads impact parameter from transit shape while eccentricity
+is unobservable from a single transit. These bins test that on real data.
+
+BY ECCENTRICITY - median |error| %
+eccentricity  n  analytic  scalars  synth full  inj full  inj scalars
+------------  -  --------  -------  ----------  --------  -----------
+e = 0         1  -         -        -           -         -          
+0 < e < 0.15  3  64        25       37          36        31         
+0.15-0.35     5  78        16       47          48        29         
+e >= 0.35     4  91        50       68          70        47         
+
+------------------------------------------------------------------------------------------------------------
+3b-sens. SENSITIVITY OF THE RANK CORRELATION TO THE SNR GATE
+------------------------------------------------------------------------------------------------------------
+The gate at 7.5 comes from an approximation (sigma_T/T ~ 0.45/Q), so any
+target sitting close to it makes the threshold a judgement call. This checks
+whether including borderline targets changes the sign or the significance of
+the primary result. If it does not, the threshold choice is immaterial and
+the paper can say so.
+
+  borderline targets (0.85 x gate <= SNR < gate = 6.38-7.50): TOI-4633 c (SNR 7.3), HD 22946 d (SNR 6.7)
+model        rho (gated)    p      rho (+borderline)  p      sign/significance
+-----------  -------------  -----  -----------------  -----  -----------------
+scalars      +0.493 (n=15)  0.062  +0.473 (n=17)      0.055  unchanged        
+synth full   +0.743 (n=15)  0.002  +0.677 (n=17)      0.003  unchanged        
+inj full     +0.404 (n=15)  0.136  +0.348 (n=17)      0.171  unchanged        
+inj scalars  +0.400 (n=15)  0.140  +0.375 (n=17)      0.138  unchanged        
+
+  VERDICT: no model changes sign or significance when the borderline
+  targets are included. The 7.5 threshold is immaterial to the primary
+  result and the paper can state that explicitly.
+
+============================================================================================================
+3c. DID THE DOMAIN GAP CLOSE?  ** PRIMARY RESULT **
+============================================================================================================
+Out-of-distribution by construction: the injection noise pool excludes every
+evaluation star, so these targets are stars the pool has never seen. Unlike
+the in-distribution 44%/66% split, this does test transfer.
+
+method       median |error| on real targets
+-----------  ------------------------------
+analytic     69.2%                         
+scalars      47.8%                         
+synth full   52.8%                         
+inj full     54.4%                         
+inj scalars  40.5%                         
+
+  inj_full 54.4%  vs  inj_scalars 40.5%   (difference -13.9 pp)
+  ONE-LINE VERDICT: the CNN branch still LOSES to its scalars-only control
+  on real stars - injection-recovery did NOT close the domain gap.
+
+  For comparison, synthetic-trained: full 52.8% vs scalars 47.8%
+
+============================================================================================================
+3d. EPHEMERIS EXTRAPOLATION ACROSS THE SAMPLE
+============================================================================================================
+Sector choice matters more than expected. TOI-2134 c measured at n=0 (S52)
+gives depth 1.008% and SNR 182; the same ephemeris extrapolated to n=8 (S80)
+gives 0.053% and SNR 2.5 - a factor of 19 in depth from sector choice alone.
+If many targets sit at high n, ephemeris extrapolation is a systematic across
+the sample rather than a one-off, and the paper must say so.
+
+  n = 0 (measured epoch)      3/14
+  1 <= n <= 3                6/14
+  n > 3 (far extrapolation)  5/14
+  median n = 1, max n = 25
+  propagated timing uncertainty: median 0.04 h, max 0.18 h
+  (search half-window is 0.75 d = 18 h, so targets whose propagated
+   uncertainty approaches that are at risk of a missed epoch)
+
+============================================================================================================
+4. BLS DIAGNOSTICS
+============================================================================================================
+target      true P  P(0.5-27)  SDE  edge?  cycles  P(0.5-200)  SDE  edge?
+----------  ------  ---------  ---  -----  ------  ----------  ---  -----
+TOI-2147 b  26.2    25.20      4.0  no     1.12    25.21       nan  no   
+TOI-1899    29.1    11.28      2.0  no     2.04    11.27       nan  no   
+TOI-5110 b  30.2    17.02      2.1  no     1.41    17.03       nan  no   
+TOI-3457 b  32.6    16.75      0.9  no     1.67    16.76       nan  no   
+TOI-6478 b  34.0    15.23      0.7  no     1.60    15.23       nan  no   
+TOI-1751 b  37.5    15.72      0.7  no     1.40    15.73       nan  no   
+TOI-4127 b  56.4    21.18      2.1  no     1.18    21.18       nan  no   
+TOI-4600 b  82.7    17.58      1.0  no     1.42    17.59       nan  no   
+TOI-813 b   83.9    16.54      0.9  no     1.54    16.54       nan  no   
+TOI-904 c   84.0    13.23      nan  no     1.79    9.44        nan  no   
+TOI-2134 c  95.5    12.11      2.1  no     2.02    12.12       nan  no   
+NGTS-30 b   98.3    15.01      0.7  no     1.74    15.01       nan  no   
+TOI-4507 b  104.6   11.82      1.7  no     2.03    11.82       nan  no   
+TOI-199 b   104.9   20.59      1.9  no     1.33    20.60       nan  no   
+NGTS-38 b   180.5   18.49      1.2  no     1.40    18.49       nan  no   
+TOI-791 c   232.0   8.90       2.5  no     2.79    17.81       nan  no   
+
+  median error, 0.5-27 d grid : 79.5%
+  median error, 0.5-200 d grid: 79.5%
+  widening the grid changes median error by -0.0 pp
+  targets where BLS pinned to a grid edge: 0/16
+  median BLS SDE: nan (a real detection is conventionally SDE > 7)
+
+============================================================================================================
+5. VALIDATION-ONLY TARGET (not single-transit, excluded above)
+============================================================================================================
+target         true P  bls27       bls200      analytic   scalars     synth full  inj full   inj scalars
+-------------  ------  ----------  ----------  ---------  ----------  ----------  ---------  -----------
+TIC 393818343  16.25   14.2 (12%)  14.2 (12%)  4.9 (70%)  18.4 (13%)  7.3 (55%)   8.3 (49%)  17.8 (9%)  
+
+============================================================================================================
+6. FAILED TARGETS
+============================================================================================================
+  TOI-2088 b                 no observed sector contains a predicted transit
+  TOI-2449 b                 no observed sector contains a predicted transit
+  NGTS-34 b                  no observed sector contains a predicted transit
+
+============================================================================================================
+7. PIPELINE DEFECTS FOUND AND FIXED (each changed published numbers)
+============================================================================================================
+   1. lightkurve flatten() mask polarity inverted
+      mask=True means EXCLUDE from the fit; passing ~mask fitted the trend through the transit. TOI-1899 depth 0.926% -> 2.911%.
+   2. transit mask wider than the detrend window
+      masked +/-1.5 d while filtering on a 1 d window, so near the transit the filter had no unmasked data and its interpolated trend sagged into the dip.
+   3. first detrend pass destroyed long transits
+      at a 1 d window NGTS-38 b's 11.4 h transit measured 3.05 h / 0.075%; that bad duration then sized the second-pass mask. First pass is now 5 d and the mask width iterates to convergence.
+   4. missing iterative sigma-clipping in the detrender
+      lightkurve clips points below the trend, which incidentally protects transits. Without it NGTS-38 b read 0.118% against a published 0.349%.
+   5. filter window unbounded relative to segment length
+      detrend_days = 8 x duration gives a 14 d filter for a 40 h transit, whose Savitzky-Golay edge effects reach past the centre of a short segment but not of a full sector - a length-dependent distortion. Now capped at 0.30 x span.
+   6. sector chosen as 'first available SPOC product'
+      without checking whether a transit occurs in it. For long-period planets most sectors contain none, so the pipeline measured noise: HD 56414 b read 1.82 h at SNR 1.6 against a published 7.58 h; TOI-201 c read 1.77 h at SNR 1.2. Fixed by resolving the sector from the published ephemeris. Effect on TOI-2134 c: SNR 7.9 -> 60.3, depth 0.142% -> 1.008%.
+   7. context_days removed from InjectionConfig while generate() still used it
+      crashed the injection build mid-edit; caught only because the log was being watched.
+   8. synthetic periods below the window length
+      put a second transit in the 2.5 d array, letting the network read period off transit spacing rather than duration. Period floor raised to 3 d.
+   9. per-cadence SNR cut admitted invisible transits
+      whose measured duration was set by noise. Replaced with integrated depth/sigma x sqrt(N_in) > 10.
+  10. evaluation targets present in the injection noise pool
+      all 8 were donating their systematics to training. Pool rebuilt from 40 field stars with every target hard-excluded.
+  11. Gaussian NLL drove sigma to zero
+      train NLL fell to -1.42 while val NLL blew up to +6.07 over 300 epochs; best epoch was 15. Fixed with a sigma floor, early stopping and per-improvement checkpointing.
+  12. sector selected without checking a transit occurs in it
+      for long-period planets most observed sectors contain no transit, so the pipeline measured noise: HD 56414 b read 1.82 h at SNR 1.6 against a published 7.58 h; TOI-201 c read 1.77 h at SNR 1.2. Fixed by resolving the sector from the published ephemeris.
+  13. ephemeris merged on tic_id alone
+      multi-planet systems share a TIC, so five targets carried another planet's transit time: TOI-201 c, TOI-2295 b, HD 28109 d, TOI-904 c and HD 22946 d. Fixed by asserting pl_name matches exactly, enforced as a pre-flight gate that refuses to launch on any mismatch.
+  14. sector candidates ranked by transit centrality, not cycle count
+      ephemeris timing uncertainty compounds with the number of cycles extrapolated from the measured epoch, sigma_t(n) = sqrt(sigma_T0^2 + (n sigma_P)^2). Ranking by how centrally the transit sat in its sector ignored this: TOI-2134 c selected S80 (n=8) over S52 (n=0), giving depth 0.053% vs 1.008% and SNR 2.5 vs 182 - a factor of 19 in depth from sector choice alone. Fixed by minimising |n|, with an SNR-validated fallback.
+
+============================================================================================================
+8. CLAIMS NOT YET SUPPORTED
+============================================================================================================
+  - Injection-recovery closing the sim-to-real gap. inj_full 44% vs inj_scalars
+    66% is IN-DISTRIBUTION: measured on held-out data from the same 40-star pool
+    it trained on, sharing systematics with training. This is identical in
+    character to the synthetic result (38.2% vs 57.3%) that then failed to
+    transfer to real targets. Only the real-target columns above answer whether
+    the gap closed.
+  - Any claim resting on the original n = 3. TIC 393818343 is not single-transit,
+    so the pre-expansion sample was n = 2.

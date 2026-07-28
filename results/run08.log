@@ -1,0 +1,61 @@
+[08] 60,000 samples from /Users/air/exoplanet-pinn/results/data/synthetic_v2.npz
+
+=== training: full (use_lightcurve=True) ===
+  epoch    0  total  -0.0066  data  -0.0066  phys   0.0000  val_nll  -0.2149  val_med_err   51.2%
+  epoch    5  total  -0.2966  data  -0.3006  phys   0.0406  val_nll  -0.3287  val_med_err   38.8%
+  epoch   10  total  -0.3481  data  -0.3527  phys   0.0455  val_nll  -0.3476  val_med_err   40.9%
+  epoch   15  total  -0.3894  data  -0.3941  phys   0.0478  val_nll  -0.3356  val_med_err   41.8%
+  epoch   20  total  -0.4303  data  -0.4353  phys   0.0502  val_nll  -0.3254  val_med_err   41.4%
+  early stop at epoch 24: no val improvement for 12 epochs (best was epoch 12)
+[train] done in 320.4s  best val NLL -0.3553 at epoch 12
+[train] saved /Users/air/exoplanet-pinn/results/models/cnn_pinn_full/cnn_pinn.pt
+
+=== training: scalars_only (use_lightcurve=False) ===
+  epoch    0  total   0.0162  data   0.0162  phys   0.0000  val_nll  -0.1178  val_med_err   58.6%
+  epoch    5  total  -0.1195  data  -0.1215  phys   0.0199  val_nll  -0.1412  val_med_err   58.1%
+  epoch   10  total  -0.1280  data  -0.1300  phys   0.0195  val_nll  -0.1475  val_med_err   60.5%
+  epoch   15  total  -0.1307  data  -0.1327  phys   0.0197  val_nll  -0.1425  val_med_err   56.3%
+  epoch   20  total  -0.1318  data  -0.1338  phys   0.0202  val_nll  -0.1541  val_med_err   58.5%
+  epoch   25  total  -0.1364  data  -0.1384  phys   0.0196  val_nll  -0.1540  val_med_err   56.3%
+  epoch   30  total  -0.1392  data  -0.1412  phys   0.0201  val_nll  -0.1514  val_med_err   56.7%
+  early stop at epoch 35: no val improvement for 12 epochs (best was epoch 23)
+[train] done in 8.6s  best val NLL -0.1573 at epoch 23
+[train] saved /Users/air/exoplanet-pinn/results/models/cnn_pinn_scalars_only/cnn_pinn.pt
+
+============================================================================================
+HEAD TO HEAD on held-out synthetic data
+============================================================================================
+method                          median err  scatter [dex]  as factor  within 2x  bias  1sig cov
+------------------------------  ----------  -------------  ---------  ---------  ----  --------
+1. analytic inversion           61.6%       0.613          x4.10      40%        0.43  -       
+2. kNN Bayes (the Monte Carlo)  56.0%       0.382          x2.41      58%        1.01  72%     
+3. CNN-PINN, scalars only       57.3%       0.385          x2.43      57%        1.08  70%     
+4. CNN-PINN, full               38.2%       0.278          x1.90      71%        0.98  73%     
+
+--------------------------------------------------------------------------------------------
+VERDICT
+--------------------------------------------------------------------------------------------
+  kNN Bayes (Monte Carlo)  0.382 dex
+  CNN-PINN scalars only    0.385 dex   (1.01x the Monte Carlo)
+  CNN-PINN full            0.278 dex   (0.73x the Monte Carlo)
+
+  The scalars-only network matches the kNN posterior, confirming the network
+  does learn the correct scalar posterior. So it is a clean control.
+
+  The full model is 28% tighter than the scalars-only ablation.
+  That gap cannot come from the period prior (both models have it) and cannot
+  come from the four scalars (both models see them). It can ONLY come from the
+  light curve - the CNN is reading transit shape, most plausibly impact
+  parameter via the ingress slope and the V-vs-U profile.
+
+  >>> The CNN-PINN BEATS the Monte Carlo by a factor of 1.37 in scatter. <<<
+
+by eccentricity (median |error|)
+ecc        n     analytic inversion  kNN Bayes (the Monte Carlo)  CNN-PINN, scalars only  CNN-PINN, full
+---------  ----  ------------------  ---------------------------  ----------------------  --------------
+0.00-0.00  2251  54.6%               51.2%                        54.4%                   27.7%         
+0.00-0.15  3009  54.6%               54.0%                        54.9%                   31.0%         
+0.15-0.35  2209  64.6%               55.5%                        56.0%                   45.7%         
+0.35-0.90  1531  80.6%               66.8%                        64.8%                   66.1%         
+
+[08] figure -> /Users/air/exoplanet-pinn/results/figures/beat_the_monte_carlo.png
